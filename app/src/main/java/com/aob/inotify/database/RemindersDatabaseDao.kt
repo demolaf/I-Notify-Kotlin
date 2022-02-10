@@ -21,10 +21,4 @@ interface RemindersDatabaseDao {
      */
     @Query("SELECT * FROM reminders_table ORDER BY reminderId DESC")
     fun getAllReminders(): LiveData<List<RemindersData>>
-
-    /**
-     * Selects and returns the latest reminder.
-     */
-    @Query("SELECT * FROM reminders_table ORDER BY reminderId DESC LIMIT 1")
-    suspend fun getLatestReminder(): RemindersData?
 }

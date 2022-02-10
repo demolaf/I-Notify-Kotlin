@@ -91,7 +91,6 @@ class AddReminderViewFragment : BottomSheetDialogFragment() {
             .putString("name", binding.editTextReminderName.text.toString())
             .putString("description", binding.editTextTReminderDescription.text.toString())
 
-        try {
             // try to get the difference between the reminder set time and current time
             // which sets the delay before the notification comes
             val delay = viewModel.getDelay()
@@ -105,9 +104,6 @@ class AddReminderViewFragment : BottomSheetDialogFragment() {
             workManager.enqueue(notificationWork)
 
             Log.d(TAG, "Schedule notification delay $delay")
-        } catch (e: Exception) {
-            Log.d(TAG, e.toString())
-        }
     }
 
     /**
