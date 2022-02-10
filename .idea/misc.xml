@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.22752990722656252" />
+        <entry key="app/src/main/res/layout/activity_remind_me.xml" value="0.23585526315789473" />
+        <entry key="app/src/main/res/layout/fragment_add_reminder_view.xml" value="0.2450657894736842" />
+        <entry key="app/src/main/res/layout/fragment_remind_me_view.xml" value="0.25249633789062503" />
+        <entry key="app/src/main/res/layout/remind_list_item.xml" value="0.23585526315789473" />
+        <entry key="app/src/main/res/layout/reminders_list_item.xml" value="0.25831298828125004" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
