@@ -52,6 +52,7 @@ class NotificationUtil(var name: String, var description: String) {
             .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
             .build()
 
+        // create notification channel
         val channel =
             NotificationChannel(NOTIFICATION_CHANNEL, NOTIFICATION_NAME, NotificationManager.IMPORTANCE_HIGH)
 
