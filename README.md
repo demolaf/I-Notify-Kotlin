@@ -19,3 +19,7 @@ App is used to schedule reminders. It uses work manager and local notifications 
  - [Navigation component](https://developer.android.com/guide/navigation  "Navigation component Android Dev Docs")
  - [LiveData](https://developer.android.com/topic/libraries/architecture/livedata  "LiveData Android Dev Docs ")
  - [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel "ViewModel Android Dev Docs")
+
+
+
+![part 2 2](https://user-images.githubusercontent.com/48495111/153576365-3a1b2fec-adec-46dc-9d16-6380830e0e3a.gif)
