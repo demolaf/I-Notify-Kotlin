@@ -158,7 +158,9 @@ class AddReminderViewFragment : BottomSheetDialogFragment() {
         datePicker.datePicker.minDate = System.currentTimeMillis() - 1000
         datePicker.setOnDateSetListener { _, year, month, dayOfMonth ->
             val date = LocalDate.of(year, month, dayOfMonth)
-            val text: String = date.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"))
+            val selectedMonth = date.month + 1
+            val formattedDate = LocalDate.of(year, selectedMonth, dayOfMonth)
+            val text = formattedDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"))
 
             /// set the reminder date to parsed date
             viewModel.reminderDate = text
