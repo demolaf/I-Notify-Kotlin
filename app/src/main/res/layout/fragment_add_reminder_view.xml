@@ -53,28 +53,27 @@
 
         <Button
             android:id="@+id/chooseDate"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="64dp"
             android:backgroundTint="#8BC34A"
             android:text="Choose date"
             android:textColor="@android:color/white"
-            app:layout_constraintEnd_toEndOf="@id/editTextTReminderDescription"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@id/editTextTReminderDescription"
-            app:layout_constraintTop_toBottomOf="@id/editTextTReminderDescription" />
+            app:layout_constraintStart_toStartOf="@+id/editTextTReminderDescription"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTReminderDescription" />
 
         <Button
             android:id="@+id/chooseTime"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="24dp"
             android:backgroundTint="#8BC34A"
             android:text="Choose time"
             android:textColor="@android:color/white"
-            app:layout_constraintEnd_toEndOf="@id/chooseDate"
-            app:layout_constraintStart_toStartOf="@id/chooseDate"
-            app:layout_constraintTop_toBottomOf="@id/chooseDate" />
+            app:layout_constraintEnd_toEndOf="@+id/editTextTReminderDescription"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTReminderDescription" />
 
         <Button
             android:id="@+id/addNewReminderButton"

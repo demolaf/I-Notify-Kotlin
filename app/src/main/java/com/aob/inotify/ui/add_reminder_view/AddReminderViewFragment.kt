@@ -87,6 +87,9 @@ class AddReminderViewFragment : BottomSheetDialogFragment() {
      * Schedule notification using the delay (how long before the notification is shown).
      */
     private fun scheduleNotification() {
+        // A persistable set of key/value pairs which are used as inputs and outputs for ListenableWorkers.
+        // Here we pass in our reminder name and description as key value pairs to be used by our reminder worker class
+        // using the "inputData" variable
         val data = Data.Builder()
             .putString("name", binding.editTextReminderName.text.toString())
             .putString("description", binding.editTextTReminderDescription.text.toString())
