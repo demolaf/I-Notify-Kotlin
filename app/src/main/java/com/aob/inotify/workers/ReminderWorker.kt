@@ -5,6 +5,7 @@ import androidx.work.Worker
 import androidx.work.WorkerParameters
 import com.aob.inotify.util.NotificationUtil
 import java.io.IOException
+import java.util.*
 
 
 class ReminderWorker(context: Context, workerParams: WorkerParameters) :
@@ -15,15 +16,17 @@ class ReminderWorker(context: Context, workerParams: WorkerParameters) :
      * executed on ReminderWorker
      */
     override fun doWork(): Result {
+        val uuid = Random(System.currentTimeMillis()).nextInt(1000)
         val name = inputData.getString("name")
         val description = inputData.getString("description")
-        val id = inputData.getInt(NotificationUtil.NOTIFICATION_ID, 0)
+        val id = inputData.getInt(NotificationUtil.NOTIFICATION_ID, uuid)
 
         // try to do work if successful return success else return failure
         return try {
             // do the work of sending notification
             val notificationUtil = NotificationUtil(name.toString(), description.toString())
             notificationUtil.showNotification(applicationContext, id)
+
             Result.success()
         } catch (e: IOException) {
             Result.failure()
