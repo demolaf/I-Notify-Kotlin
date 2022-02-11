@@ -3,7 +3,6 @@ package com.aob.inotify.ui.add_reminder_view
 import android.app.Application
 import android.util.Log
 import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.aob.inotify.data.model.RemindersData
 import com.aob.inotify.database.RemindersDatabaseDao
