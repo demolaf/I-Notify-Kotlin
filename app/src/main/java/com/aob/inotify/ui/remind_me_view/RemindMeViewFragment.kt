@@ -14,7 +14,7 @@ import com.aob.inotify.databinding.FragmentRemindMeViewBinding
 import com.aob.inotify.ui.add_reminder_view.AddReminderViewFragment
 
 class RemindMeViewFragment : Fragment() {
-    /// Add the remindViewModel
+
     private lateinit var remindMeViewModel: RemindMeViewModel
     lateinit var binding: FragmentRemindMeViewBinding
 

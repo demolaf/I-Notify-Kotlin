@@ -16,10 +16,12 @@ class ReminderWorker(context: Context, workerParams: WorkerParameters) :
      * executed on ReminderWorker
      */
     override fun doWork(): Result {
-        val uuid = Random(System.currentTimeMillis()).nextInt(1000)
+        // get the name for the notification using inputData from Worker
         val name = inputData.getString("name")
+        // get the description for the notification
         val description = inputData.getString("description")
-        val id = inputData.getInt(NotificationUtil.NOTIFICATION_ID, uuid)
+        // create a generator for unique ids, this will make sure notifications don't get replaced
+        val id = inputData.getInt(NotificationUtil.NOTIFICATION_ID, Random(System.currentTimeMillis()).nextInt(1000))
 
         // try to do work if successful return success else return failure
         return try {
@@ -31,6 +33,5 @@ class ReminderWorker(context: Context, workerParams: WorkerParameters) :
         } catch (e: IOException) {
             Result.failure()
         }
-
     }
 }
